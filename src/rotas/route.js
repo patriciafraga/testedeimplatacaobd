@@ -8,6 +8,6 @@ route.get('/', async (req,res) => {
 });
 route.get('/carros', async (req,res) => {
     const listarCarros = await knex(`carros`);
-    return res.status(200).json(listarCarros.rows);
+    return res.status(200).json(listarCarros);
 });
 module.exports = route;
